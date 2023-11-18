@@ -87,38 +87,22 @@ def get_kml(lakes):
     pnt = kml.newpoint(name=lk['name'].replace('&', ' and '), coords=coords, description=desc)
   return kml
 
-'''
-
-starting_kml = get_kml(starting_lakes)
-starting_kml.save("starting_lakes.kml")
-
-overabundant_kml = get_kml(overabundant_lakes)
-overabundant_kml.save("overabundant_lakes.kml")
-
-all_kml = get_kml(all_lakes)#[130:131])
-all_kml.save("all_lakes.kml")
-
-
-
-
-
-
-
-'''
-
 if __name__ == '__main__':
     data = get_data()
 	# Store JSON
-    output = json.dumps(dict(lakes=data['lakes'], timestamp=data['timestamp']))#data)
+    output = json.dumps(dict(lakes=data['lakes'], timestamp=data['timestamp']), indent=2)#data)
     open('data.json', 'w').write(output)
     open('data/starting_lakes.json', 'w').write(json.dumps(
-        dict(lakes=data['starting_lakes'], timestamp=data['timestamp'])
+        dict(lakes=data['starting_lakes'], timestamp=data['timestamp']),
+        indent=2
     ))
     open('data/overabundant_lakes.json', 'w').write(json.dumps(
-        dict(lakes=data['overabundant_lakes'], timestamp=data['timestamp'])
+        dict(lakes=data['overabundant_lakes'], timestamp=data['timestamp']),
+        indent=2
     ))
     open('data/normal_lakes.json', 'w').write(json.dumps(
-        dict(lakes=data['normal_lakes'], timestamp=data['timestamp'])
+        dict(lakes=data['normal_lakes'], timestamp=data['timestamp']),
+        indent=2
     ))
     # Store KML
     starting_kml = get_kml(data['starting_lakes'])
