@@ -16,5 +16,5 @@ also enjoying their favorite outdoor passtime.
 
 ## Development
 
-Make a copy of `mapbox-token.example.js` file and name it `mapbox-token.example.js`. Replace the value of `MAPBOX_TOKEN` with your [Mapbox access token](https://docs.mapbox.com/api/accounts/tokens/).
+Make a copy of `.env.example` file and name it `.env`. Replace the value of `MAPBOX_TOKEN` with your [Mapbox access token](https://docs.mapbox.com/api/accounts/tokens/).
 
