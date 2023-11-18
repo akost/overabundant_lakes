@@ -157,9 +157,8 @@ var updateMarkers = function() {
 }
 
 var showTimestamp = function(timestamp) {
-  timestamp_div = document.getElementById("last_update_timestamp");
-  var content = document.createTextNode(timestamp);
-  timestamp_div.appendChild(content);
+  timestamp_placeholder = document.getElementById("last_update_timestamp");
+  timestamp_placeholder.innerHTML = timestamp;
 }
 
 function sleep(milliseconds) {
