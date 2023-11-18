@@ -1,62 +1,27 @@
-<head title="Overabundant Fish Lakes">
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-34354121-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-34354121-1');
-</script>
-
-<!-- Leaflet Maps -->
+<html>
+<head>
+<title>Overabundant Fish Lakes Washington</title>
+<link rel="icon" type="image/png" href="trout.png">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
- <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-   crossorigin=""></script>
-
-<link rel="icon" type="image/png" href="trout.png">
-
-<!--<script src="https://code.angularjs.org/1.6.9/angular.js"></script>-->
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
-
-<!--testing-->
-<!--<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.js'></script>-->
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.css' rel='stylesheet' />
 
-
+<script src="mapbox-token.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+crossorigin=""></script>
 <style>
-    .marker {
-width: 500px;
-height: 500px;
-}
-    </style>
-    
+  .marker {
+    width: 500px;
+    height: 500px;
+    }
+</style>
 </head>
-
-
-
-
 <body ng-app="app">
 
-<!--<h1 ng-controller="HelloWorldCtrl">{{message}}</h1>
-<script>
-    angular.module("app", []).controller("HelloWorldCtrl", function($scope) {
-    $scope.message="Overabundant Fish Lakes of Washington State"
-    } )
-</script>-->
-
 <h1>High Fish Lakes of Washington State</h1>
-
-
-<!--
-<p>This page shows the locations of overabundant mountain fishing lakes,
-with data scraped from the
-<a href="https://wdfw.wa.gov/fishing/locations/high-lakes/overabundant">WDFW site</a>.
-</p>
--->
 
 <p>This page shows the locations of alpine fishing lakes,
 with data scraped from the
@@ -65,8 +30,9 @@ To help planning, it breaks them out by whether they are overabundant
 or good starting lakes.
 </p>
 
-<p>
+
 <h2>Overabundant: </h2>
+<p>
   Overabundant lakes are ones where there are too many fish (usually from human stocking)
   for the available resources.  This puts a great burden on the ecosystem, and
   the WDFW encourages anglers to harvest the maximum daily limit.
@@ -74,14 +40,14 @@ or good starting lakes.
   and do the environment a favor!
 </p>
 
-<p>
+
 <h2>Starting: </h2>
+<p>
   These lakes are easier to access for people new to the sport of alpine fishing.
 </p>
 
 <b>Filters:</b>
 <br>
-
 <div>
 
 <div style="position:relative;float:left;width:20%">
@@ -134,16 +100,11 @@ County:
 
 <p></p>
 <b>Legend:</b>
-<img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" style="height:3%">Starting
-<img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png" style="height:3%">Overstocked
-<img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png" style="height:3%">Other
+<img alt='' src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" style="height:3%">Starting
+<img alt='' src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png" style="height:3%">Overstocked
+<img alt='' src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png" style="height:3%">Other
 
-<!--
-<div style="height:70%;width:70%" id="mapid"></div>
--->
-<!--testing-->
-<div id='mapid' style='width: 100%; height: 50%;'></div>
-<!--<div id='mapid' style='width: 100%;'></div>-->
+<div id='mapid' style='width: 100%; height: 800px;'></div>
 
 
 <p>
@@ -174,9 +135,5 @@ you can ping him and ask him to update it.
 </p>
 
 <script type="text/javascript" src="myscripts.js"></script>
-
-
-<script>
-</script>
-
 </body>
+</html>
