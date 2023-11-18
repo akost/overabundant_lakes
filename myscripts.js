@@ -57,7 +57,6 @@ var addLakesToMap = function(lakes) {
   }
   for (i=0; i<lakes.length; i++) {
     lk = lakes[i];
-    //console.log(lk);
     if (lk['starting'] & lk['overabundant']) {
       color='violet'
     } else if (lk['starting'] & (!lk['overabundant'])) {
@@ -67,9 +66,7 @@ var addLakesToMap = function(lakes) {
     } else {
       color='grey'
     }
-    //m = new mapboxgl.Marker({color: color, size: 'small'})
     m = new mapboxgl.Marker({color: color, scale: scl})
-    console.log('FOO')
     m.setLngLat([lk['lon'], lk['lat']]);
     //m.classList.add('marker');
     var popup = new mapboxgl.Popup().setHTML(lake2marker_html(lk));
@@ -95,7 +92,6 @@ var lake2marker_html = function(lk) {
 }
 
 var getFilterFunction = function() {
-  console.log('in getFilterFunction')
   // Reads current filter settings and returns a function that says whether
   // a lake passes those filters
 
