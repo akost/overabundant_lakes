@@ -14,3 +14,7 @@ that puts all the overstocked lakes on an interactive map so you can see where t
 It is used and appreciated by anglers across the state, who want to do a public service while
 also enjoying their favorite outdoor passtime.
 
+## Development
+
+Make a copy of `mapbox-token.example.js` file and name it `mapbox-token.example.js`. Replace the value of `MAPBOX_TOKEN` with your [Mapbox access token](https://docs.mapbox.com/api/accounts/tokens/).
+

@@ -1,6 +1,3 @@
-
-// Global Variables
-
 var DEFAULT_DATA = {"lakes": [
   {"overabundant":true, "starting":true, "name": "Airplane", "url": "https://wdfw.wa.gov/fishing/locations/high-lakes/airplane", "elevation": 5305.0, "county": "Chelan", "lat": 48.002594, "lon": -121.006674, "area": "9.40 Acres"},
   {"overabundant":true, "starting":false, "name": "Arrowhead", "url": "https://wdfw.wa.gov/fishing/locations/high-lakes/arrowhead", "elevation": 4411.0, "county": "Skagit", "lat": 48.432548, "lon": -121.290053, "area": "10.50 Acres"},
@@ -16,7 +13,7 @@ var markers = [];
 // Functions for populating the map
 
 var initializeMap = function() {
-  mapboxgl.accessToken = "pk.eyJ1IjoiZmllbGRjYWR5IiwiYSI6ImNqd3Rmb2d3bjBkMDA0OW5yamYxNnRwdGwifQ.kBilx8iMkTn8RUyrO7ZHGA";
+  mapboxgl.accessToken = MAPBOX_TOKEN;
   mymap = new mapboxgl.Map({
     container: 'mapid',
     style: 'mapbox://styles/mapbox/streets-v9',
@@ -93,7 +90,8 @@ var lake2marker_html = function(lk) {
   elevation = '<p>Elevation: '+String(Math.round(lk['elevation']))+'ft'
   county = '<p>County: '+lk['county']+'</p>'
   size = '<p>Size: '+String(lk['area'])+'</p>'
-  return clickable_name+elevation+county+size;
+  gmaps = `<p><a target="_blank" href="https://www.google.com/maps/place/${lk.lat},${lk.lon}">${lk.lat},${lk.lon}</a></p>`
+  return clickable_name+elevation+county+size+gmaps;
 }
 
 var getFilterFunction = function() {

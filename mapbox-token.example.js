@@ -1,0 +1,1 @@
+const MAPBOX_TOKEN="reaplace_me_with_token";
