@@ -13,13 +13,21 @@
 integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
 crossorigin=""></script>
 <style>
+  main, footer {
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+  }
+
   .marker {
     width: 500px;
     height: 500px;
     }
+    
 </style>
 </head>
 <body ng-app="app">
+  <main>
 
 <h1>High Fish Lakes of Washington State</h1>
 
@@ -100,9 +108,9 @@ County:
 
 <p></p>
 <b>Legend:</b>
-<img alt='' src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" style="height:3%">Starting
-<img alt='' src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png" style="height:3%">Overstocked
-<img alt='' src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png" style="height:3%">Other
+<img alt='Starting' src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" style="height:3%">Starting
+<img alt='Overstocked' src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png" style="height:3%">Overstocked
+<img alt='Other' src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png" style="height:3%">Other
 
 <div id='mapid' style='width: 100%; height: 800px;'></div>
 
@@ -119,7 +127,8 @@ I highly encourage you to use Google Earth and plug in these KML files:
 		All alpine Lakes</a></li>
 </ul>
 </p>
-
+</main>
+<footer>
 <p>
 This site was created as a project by
 <a href="http://www.fieldcady.com">Field Cady</a>.
@@ -133,7 +142,7 @@ you can ping him and ask him to update it.
 <p>
 The data was last updated at: <span id="last_update_timestamp"></span>
 </p>
-
+</footer>
 <script type="text/javascript" src="myscripts.js"></script>
 </body>
 </html>
